@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LocalPro - Tu Profesional de Confianza</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="container">
+    <a href="#" class="logo">LocalPro</a>
+    <div class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="register.html">Registrarse</a>
+      <a href="home.html">Buscar</a>
+      <a href="profile.html">Perfil</a>
+    </div>
+  </nav>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>Encuentra Profesionales de Confianza</h1>
+  <p>Electricistas, plomeros, jardineros y más... Todos verificados y listos para ayudarte.</p>
+  
+  <form id="buscador-form">
+    <input type="text" id="busqueda" placeholder="Buscar servicios o profesionales..." />
+    <button type="submit">Buscar</button>
+  </form>
+</section>
+
+  <!-- Servicios Destacados -->
+  <div class="container">
+    <h2 style="margin: 2rem 0 1rem;">Servicios Populares</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="electricista.png"  class="imagen-perfil" alt="Electricista">
+        <div class="card-content">
+          <h3 class="card-title">Electricista</h3>
+          <p>Instalaciones, reparaciones, y más. Disponible 24/7.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="plomero.png"  class="imagen-perfil" alt="Plomero">
+        <div class="card-content">
+          <h3 class="card-title">Plomero</h3>
+          <p>Fugas, instalaciones de gas y agua, revisión de cañerías.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="jardinero.png"  class="imagen-perfil" alt="Jardinero">
+        <div class="card-content">
+          <h3 class="card-title">Jardinero</h3>
+          <p>Mantenimiento de jardines, poda, diseño exterior.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('buscador-form').addEventListener('submit', function(e) {
+      e.preventDefault(); // Evita recargar la página
+      const valor = document.getElementById('busqueda').value.trim();
+      if (valor) {
+        console.log('Buscando:', valor);
+        // Aquí podrías redirigir o hacer un filtrado dinámico
+        // window.location.href = `home.html?busqueda=${encodeURIComponent(valor)}`;
+      }
+    });
+  </script>
+  
+
+  <!-- Footer -->
+  <footer>
+    © 2025 LocalPro. Todos los derechos reservados.
+  </footer>
+</body>
+</html>
